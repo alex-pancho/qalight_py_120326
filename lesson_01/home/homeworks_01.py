@@ -55,11 +55,11 @@ print("Всього марок залишилось:", total_remaining)
 У саду посадили 4 яблуні. Груш на 5 більше яблунь, а слив - на 2 менше.
 Скільки всього дерев посадили в саду?
 """
-apple_tree = 4
-pear_tree = apple_tree + 5
-plumb_tree = apple_tree - 2
-total_tree = apple_tree + pear_tree + plumb_tree
-print("Всього дерев посадили в саду:", total_tree)
+apple = 4
+pear = apple + 5
+plumb = apple - 2
+total_tree = apple + pear + plumb
+print("Всього дерев посадили в саду:", total)
 
 # task 08
 """
