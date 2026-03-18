@@ -68,12 +68,23 @@ print("Всього дерев посадили в саду:", total)
 Надвечір потепліло на 4 градуси. Яка температура надвечір?
 """
 
+temperature = 5
+temperature = temperature - 10
+temperature = temperature + 4
+print("Температура надвечір:", temperature ,"градус")
+
 # task 09
 """
 Взагалі у театральному гуртку - 24 хлопчики, а дівчаток - вдвічі менше.
 1 хлопчик захворів та 2 дівчинки не прийшли сьогодні.
 Скількі сьогодні дітей у театральному гуртку?
 """
+boys = 24
+girls = boys / 2
+boys_today = boys - 1
+girls_today = girls - 2
+total_children = boys_today + girls_today
+print("Cьогодні загалом у театральному гуртку:", int(total_children), "дітей")
 
 # task 10
 """
@@ -81,5 +92,13 @@ print("Всього дерев посадили в саду:", total)
 а третя - як половина вартості першої та другої разом.
 Скільки будуть коштувати усі книги, якщо купити по одному примірнику?
 """
+first_book_price = 8
+second_book_price = first_book_price + 2
+third_book_price = (first_book_price + second_book_price) / 2
+total_book_price = first_book_price + second_book_price + third_book_price
+print("Перша книжка коштує:", first_book_price, "грн")
+print("Друга книжка коштує:", second_book_price, "грн")
+print("Третя книжка коштує:",int(third_book_price), "грн")
+print("Загальна вартість усіх книг при купівлі по одному примірнику:", int(total_book_price) ,"грн")
 
 print("lalala")
