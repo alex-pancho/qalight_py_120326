@@ -1,32 +1,30 @@
 # task 01 == Виправте синтаксичні помилки
 print("Hello", end = " ")
-    print("world!")
+print("world!")
 
 # task 02  == Виправте назви змінних, щоб текст виводався
-hello = "Hello"
-world = "world"
+helo = "Hello"
+word = "world"
 print(f"{helo} {word}!")
 
 # task 03 == Зробіть так, щоб кількість бананів була
 # завжди на чотири штуки більша, ніж яблук
 apples = 2
-banana = # код тут
-
+banana = apples + 4
 
 # task 04 == виправте назви змінних
-1_storona = 1
-?torona_2 = 2
-сторона_3 = 3
-$torona_4 = 4
+Storona_1 = 1
+Storona_2 = 2
+Storona_3 = 3
+Storona_4 = 4
 
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
-perimetery = ? + ? + ? + ?
-print()
-
+perimetery = Storona_1 + Storona_2 + Storona_3 + Storona_4
+print(perimetery)
 
 """
-    # Задачі 06 -10:
+    # Задачі 06-10:
     # Переведіть задачі з книги "Математика, 2 клас"
     # на мову пітон і виведіть відповідь, так, щоб було
     # зрозуміло дитині, що навчається в другому класі
@@ -40,6 +38,17 @@ print()
 1 марку із серії «Звірі» вона подарувала подружці. 
 Скільки марок лишилось у Оксани?
 """
+mark_art = 20
+mark_animal = 7
+gift_art = 5
+gift_animal = 1
+minus_art = mark_art - gift_art
+minus_animal = mark_animal - gift_animal
+total_remaining = minus_art + minus_animal
+print("У Оксани залишилось:")
+print("Марок із серії «Мистецтво»:", minus_art)
+print("Марок із серії «Звірі»:", minus_animal)
+print("Всього марок залишилось:", total_remaining)
 
 # task 07
 """
