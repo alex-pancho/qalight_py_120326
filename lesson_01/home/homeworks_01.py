@@ -20,7 +20,7 @@ Yevhen_4 = 4
 
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
-perimetery = Storona_1 + Storona_2 + Storona_3 + Storona_4
+perimetery = Yevhen_1 + Yevhen_2 + Yevhen_3 + Yevhen_4
 print(perimetery)
 
 """
