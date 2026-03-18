@@ -13,14 +13,14 @@ apples = 2
 banana = apples + 4
 
 # task 04 == виправте назви змінних
-Storona_1 = 1
-Storona_2 = 2
-Storona_3 = 3
-Storona_4 = 4
+Yevhen_1 = 1
+Yevhen_2 = 2
+Yevhen_3 = 3
+Yevhen_4 = 4
 
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
-perimetery = Storona_1 + Storona_2 + Storona_3 + Storona_4
+perimetery = Yevhen_1 + Yevhen_2 + Yevhen_3 + Yevhen_4
 print(perimetery)
 
 """
