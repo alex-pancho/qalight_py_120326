@@ -5,41 +5,50 @@
 """
 
 # Дано текст
-text = "Hello, World!"
+text = "Hello World!"
 
 print("Оригінальний текст:", text)
 print("Довжина тексту:", len(text))
 
 # Завдання 1.1: Отримайте перший символ
-first_char = # Ваш код тут
+first_char = text[0]
+print(first_char)
 
 # Завдання 1.2: Отримайте останній символ
-last_char = # Ваш код тут
-
+last_char = text[-1]
+print(last_char)
 # Завдання 1.3: Отримайте символ з індексом 7
-char_at_7 = # Ваш код тут
+char_at_7 = text[7]
+print(char_at_7)
 
 # Завдання 1.4: Отримайте передостанній символ (використайте від'ємний індекс)
-second_last_char = # Ваш код тут
+print(f"DEBUG: довжина = {len(text)}, зміст = '{text}'") # Додайте це перед рядком 25
 
+second_last_char = text[-2]
+
+print(second_last_char)
 # Завдання 1.5: Отримайте підстроку з 3-го по 8-й символ (включно)
-substring_3_to_8 = # Ваш код тут
-
+substring_3_to_8 = text[3:8]
+print(substring_3_to_8)
 # Завдання 1.6: Отримайте перші 5 символів
-first_5_chars = # Ваш код тут
-
+first_5_chars = text[:5]
+print(first_5_chars)
 # Завдання 1.7: Отримайте останні 6 символів
-last_6_chars = # Ваш код тут
+last_6_chars = text[-6:-1]
+print(last_6_chars)
+
 
 # Завдання 1.8: Отримайте кожен другий символ з усього рядка
-every_second_char = # Ваш код тут
+every_second_char =text[:2]
+print(every_second_char)
 
 # Завдання 1.9: Отримайте рядок в зворотному порядку
-reversed_text = # Ваш код тут
+reversed_text = text[:-1]
+print(reversed_text)
 
 # Завдання 1.10: Отримайте символи з 1-го по 10-й з кроком 2
-chars_1_to_10_step_2 = # Ваш код тут
-
+chars_1_to_10_step_2 = text[1:2:10]
+print(chars_1_to_10_step_2)
 # Виведення результатів
 print("\n=== РЕЗУЛЬТАТИ ===")
 print("1.1 Перший символ:", first_char)
