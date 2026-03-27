@@ -7,21 +7,23 @@
 одну для позначення чи є особа студентом. 
 Додайте коментарі до кожної змінної.
 """
-# код вводити тут
+user_age = 25 # зміна віку
+student_name = "Ivan" # зміна імені
+is_student = True # логічна змінна
 """
 
 **2.** Рзкоментуйте та виправте помилки в наступних назвах змінних.
 Поясніть у коментарях, чому початкові назви неправильні:
 """
-# 2name = "John"
-# user-age = 25
-# $price = 100
-# class = "Math"
+name_2 = "John" # у пайтон не використовується нумерація на початку
+user_age = 25 #не можна використовувати спец. символи
+price = 100 #не можна використовувати спец. символи
+subject = "Math" # зарезервоване слово
 """
 **3.** Створіть змінну з описовим ім'ям для збереження максимальної кількості студентів у групі. 
 Присвойте їй значення 30.
 """
-# код вводити тут
+max_students_count = 30
 
 """
 **4.** Створіть змінні для збереження: 
@@ -30,14 +32,18 @@
 вартості курсу. 
 Використайте правильне іменування змінних.
 """
-# код вводити тут
+course_name = "Python"
+number_hours = 20
+course_price = 500
+
 
 """
 **5.** Розрхуйте та виведіть Затрати курсу: 
 Затрати курсу  = кількість годин / вартість курсу
 Використайте правильне іменування змінних.
 """
-# код вводити тут
+course_cost = number_hours/course_price
+print("course_cost:", course_cost)
 
 """
 **6.** Створіть змінні з різними способами запису чисел:
@@ -46,24 +52,47 @@
 - Шістнадцяткове число: 2A (в шістнадцятковій системі)
 - Восьмеричне число: 52 (в восьмеричній системі)
 """
-# код вводити тут
+decimal_number = 42
+print("decimal_number:", decimal_number)
+binary_number = 0b101010
+print("binary_number:", binary_number)
+hex_number = 0x2A
+print("hex_number:", hex_number)
+octal_number = 0o52
+print("octal_number:", octal_number)
+
 
 """
 **7.** Виконайте всі арифметичні операції (+, -, *, /, //, %, **) з числами 17 та 5. 
 Виведіть результати з поясненнями.
 """
-# код вводити тут
+a = 17
+b = 5
+print("Add:", a + b)
+print("Substraction:", a - b)
+print("Multiplication:", a * b)
+print("Division_float:", a / b)
+print("Division_int:", a // b)
+print("Division_remain:", a % b)
+print("Degree:", a ** b)
 
 """
 **8.** Обчисліть площу кола з радіусом 7.5. Використайте значення π = 3.14159.
 """
-# код вводити тут
+Radius = 7.5
+π = 3.14159
+Square = π*(Radius**2)
+print("Circul square:", Square)
 
 """
 **9.** Обчисліть залишок від ділення будь-якого числа на 7. 
 Виведіть результат з числами 50, 33, 14.
 """
-# код вводити тут
+numbers = [50,33,14]
+devisor = 7
+for num in numbers:
+    remainder = num % devisor
+    print(f"division_remain:", {remainder})
 
 """
 **10.** Переведіть задачу з книги "Математика, 5 клас"
@@ -74,14 +103,20 @@
 ське моря разом?
 """
 # код вводити тут
-
+Black_sea = 4360402
+Azov_sea = 37000
+Square_total = Black_sea + Azov_sea
+print("Sea Square Total:", Square_total)
 """
 **11.** Створіть рядок з вашим повним ім'ям та виведіть:
 - Перший символ
 - Останній символ  
 - Довжину рядка
 """
-# код вводити тут
+name = "Nina"
+print("First letter:", name[0])
+print("Last letter:", name[-1])
+print("Length name:", len(name))
 
 """
 **12.** Створіть рядок "Would you tell me, please, which way I ought to go from here?" 
@@ -89,29 +124,36 @@
 - Перші 6 символів
 - Останні 11 символів
 """
-# код вводити тут
-
+text = "Would you tell me, please, which way I ought to go from here?" 
+print("First six symbols:", text[0:6] )
+print("Last eleventh symbols:", text[-11:-1] )
 """
 **13.** Створіть багаторядковий рядок (використовуючи потрійні лапки) зі своїм улюбленим віршем або цитатою.
 """
-# код вводити тут
+long_text = """this is not my fafourite poem
+only test to practice
+Python
+"""
 
 """
 **14.** Поєднайте два рядки "Hello" та "World" у різні способи (з пробілом, з комою, з новим рядком).
 """
-# код вводити тут
-
+first_word  = "Hello"
+second_word = "World"
+print(first_word, second_word )
 """
 **15.** Створіть рядок з символами, які потребують екранування (лапки, зворотна коса риска).
 """
-# код вводити тут
+special_symbols = "Test \"double qoutes\", \'single qoutes\' and  back slash: \\ "
+print(special_symbols)
 
 """
 **16.** Напишіть код, який запитує у користувача його ім'я та вік, 
 а потім виводить привітання у форматі: "Привіт, [ім'я]! Тобі [вік] років."
 """
-# код вводити тут
-
+age = 42
+name = 'Nina'
+print(f'Hello mrs {name} and {age} years') 
 """
 
 **17.** Переведіть задачу з книги "Математика, 5 клас"
@@ -122,14 +164,21 @@
 розміщено щонайбільше 8 фото. Скільки сторінок знадобиться
 Ігорю, щоб вклеїти всі фото?
 """
-# код вводити тут
+photo = 232
+photo_number_per_page = 8
+number_of_pages = photo // photo_number_per_page
+print("Number of pages:", number_of_pages)
+
+
 
 """
 **18.** Напишіть код який запитує у користувача 
 його улюблений колір та число, а потім створює персоналізоване
 повідомлення використовуючи f-string форматування.
 """
-# код вводити тут
+favourite_colour = "grey"
+favourite_number = 8
+print (f"Fav colour: {favourite_colour} and fav number: {favourite_number}")
 
 
 """
@@ -141,9 +190,14 @@
 250 449 товарів. На другому та третьому – 222 950 товарів.
 Знайдіть кількість товарів, що розміщені на кожному складі.
 """
-# код вводити тут
-
-
+market_storage_room = 3
+total_goods = 375291
+storage_1_2 = 250449
+storage_2_3 = 222950
+storage_1 = total_goods - storage_2_3
+storage_2 = storage_1_2 - storage_1
+storage_3 = storage_2_3 - storage_2
+print("storage_1:", storage_1, "storage_2:", storage_2, "storage_3:", storage_3)
 """
 **20.** Переведіть задачу з книги "Математика, 5 клас"
 на мову пітон і виведіть відповідь, так, щоб було
@@ -153,4 +207,7 @@
 вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть
 вартість комп’ютера.
 """
-# код вводити тут
+comp_price_month = 1179
+term_credit = 18
+total_cost = comp_price_month * term_credit
+print("Computer price, grn:", total_cost)

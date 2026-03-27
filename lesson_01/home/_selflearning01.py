@@ -4,5 +4,6 @@
 
 """
 # Віднімання
-
+print("subtraction:",5-5)
 # Множення
+print("multiplication:",3*5)
