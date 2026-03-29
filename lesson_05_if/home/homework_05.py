@@ -8,23 +8,22 @@
 # operation = input("Введіть операцію (+, -, ): ")
 # num2 = float(input("Введіть друге число: "))
 
-# if operation == "+":
-#     result = int(num1 + num2)
-# elif operation == "-":
-#     result = int(num1 - num2)
-# print(f"Результат: {result}")
+if operation == "+":
+    result = int(num1 + num2)
+elif operation == "-":
+    result = int(num1 - num2)
+print(f"Результат: {result}")
 
 # Вправа 2: Перевірка паролю
 # print("\n=== ВПРАВА 2: Перевірка паролю ===")
 # print("Створіть систему перевірки паролю")
 # print("Пароль повинен містити принаймні 8 символів")
 
-# password = input("Введіть пароль: ")
-# if len(password) >= 8:
-#     print("Пароль вірний")
-# else:
-#     print("Пароль невірний")
-
+password = input("Введіть пароль: ")
+if len(password) >= 8:
+    print("Пароль вірний")
+else:
+    print("Пароль невірний")
 
 # # Вправа 3: Визначення високосного року
 # print("\n=== ВПРАВА 3: Високосний рік ===")
@@ -32,25 +31,25 @@
 # print("- Ділиться на 4 І не ділиться на 100")
 # print("- АБО ділиться на 400")
 
-# year = int(input("Enter year: "))
-# if (year % 4 == 0 and year % 100 != 0 or year % 400 == 0):
-#     print("Year is leap")
-# else:    
-#     print("Year isn't leap")
+year = int(input("Enter year: "))
+if (year % 4 == 0 and year % 100 != 0 or year % 400 == 0):
+    print("Year is leap")
+else:    
+    print("Year isn't leap")
 
 # # Вправа 4: Лічильник голосних
 # print("\n=== ВПРАВА 4: Лічильник голосних ===")
 # print("Підрахуйте кількість голосних у рядку")
 
-# text = input("Введіть текст: ").lower()
-# vowels = "аеиіїоуюя"
-# count = 0
+text = input("Введіть текст: ").lower()
+vowels = "аеиіїоуюя"
+count = 0
 
-# for char in text:
-#     if char in vowels:
-#         count += 1  
+for char in text:
+    if char in vowels:
+        count += 1  
 
-# print(f"Кількість голосних: {count}")
+print(f"Кількість голосних: {count}")
 
 # # Вправа 5: Гра 
 # print("\n=== ВПРАВА 5: Гра ===")
@@ -64,16 +63,16 @@
 # Перевірте роботу гри самостійно, змінюючи значення alien_color
 # """
 
-# alien_color = input("Введіть колір (green, yellow, red): ").lower()
+alien_color = input("Введіть колір (green, yellow, red): ").lower()
 
-# if alien_color == 'green':
-#     print("Ви щойно заробили 5 балів")
-# elif alien_color == 'yellow':
-#     print("Ви щойно заробили 10 балів")
-# elif alien_color == 'red':
-#     print("Ви щойно заробили 15 балів")
-# else:
-#     print("Ви нічого не заробили")
+if alien_color == 'green':
+    print("Ви щойно заробили 5 балів")
+elif alien_color == 'yellow':
+    print("Ви щойно заробили 10 балів")
+elif alien_color == 'red':
+    print("Ви щойно заробили 15 балів")
+else:
+    print("Ви нічого не заробили")
 
 # # Вправа 6: Піцерія *
 # print("\n=== ВПРАВА 6: Начинки для піци (pizza_topping) ===")
@@ -82,38 +81,38 @@
 # надрукуйте повідомлення про те, що ви додасте цю начинку до їхньої піци.
 # """
 
-# while True:
-#     pizza_topping = input("Введіть начинку для піци або 'quit' для завершення: ").lower()
-#     if pizza_topping == 'quit':
-#         print("Замовлення завершено!")
-#         break
-#     else:
-#         print(f"Додаємо начинку: {pizza_topping}")
+while True:
+    pizza_topping = input("Введіть начинку для піци або 'quit' для завершення: ").lower()
+    if pizza_topping == 'quit':
+        print("Замовлення завершено!")
+        break
+    else:
+        print(f"Додаємо начинку: {pizza_topping}")
 
 # # Вправа 7: Зворотний порядок цифр
 # print("\n=== ВПРАВА 7: Зворотний порядок ===")
 # print("Виведіть цифри числа у зворотному порядку")
 
-# number = input("Введіть число: ")
-# if number.isdigit():
-#     reversed_number = number[::-1]  # переворот рядка
-#     print(f"Цифри числа у зворотному порядку: {reversed_number}")
-# else:
-#     print("Будь ласка, введіть тільки цифри!")
+number = input("Введіть число: ")
+if number.isdigit():
+    reversed_number = number[::-1]  # переворот рядка
+    print(f"Цифри числа у зворотному порядку: {reversed_number}")
+else:
+    print("Будь ласка, введіть тільки цифри!")
 
 # # Вправа 8: Пошук максимального числа
 # print("\n=== ВПРАВА 8: Пошук максимального ===")
 # print("Знайдіть найбільше число серед введених")
 # print("Введіть 0 для завершення")
 
-# input_numbers = []
-# while True:
-#     num = int(input("Якщо ввести 0, пошук буде завершено: "))
-#     if num == 0:
-#         break
-#     input_numbers.append(num)   
+input_numbers = []
+while True:
+    num = int(input("Якщо ввести 0, пошук буде завершено: "))
+    if num == 0:
+        break
+    input_numbers.append(num)   
 
-# print(f"Найбільше число серед введених: {max(input_numbers)}")
+print(f"Найбільше число серед введених: {max(input_numbers)}")
 
 # # Вправа 9: Виключення зі списку
 # print("\n=== ВПРАВА 9: Виключення зі списку ===")
@@ -121,11 +120,11 @@
 # потрібно вивести на екран всі елементи списку, окрім "orange".
 # """
 
-# fruits = ["apple", "banana", "orange", "grape", "mango"]
-# for fruit in fruits:
-#     if fruit == "orange":
-#         continue
-#     print(fruit)
+fruits = ["apple", "banana", "orange", "grape", "mango"]
+for fruit in fruits:
+    if fruit == "orange":
+        continue
+    print(fruit)
 
 # # Вправа 10: Вираз в один рядок
 # print("\n=== ВПРАВА 10: Вираз з умовою в один рядок ===")
