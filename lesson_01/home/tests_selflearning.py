@@ -53,7 +53,7 @@ class TestHomeSelfLearning(unittest.TestCase):
             self.assertIn('0', output, "Результат віднімання 5 - 5 = 0 повинен бути у виводі")
             
         except Exception as e:
-            self.fail(f"Помилка при виконанні коду віднімання: {e}")
+            self.fail ("Помилка при виконанні коду віднімання: {e}")
     
     def test_multiplication_output(self):
         """Тест 2: Перевірка виводу множення 3 * 5"""
@@ -63,10 +63,10 @@ class TestHomeSelfLearning(unittest.TestCase):
             output = sys.stdout.getvalue()
             
             # Перевіряємо чи є результат множення у виводі
-            self.assertIn('15', output, "Результат множення 3 * 5 = 15 повинен бути у виводі")
+            self.assertIn ("15", output, "Результат множення 3 * 5 = 15 повинен бути у виводі")
             
         except Exception as e:
-            self.fail(f"Помилка при виконанні коду множення: {e}")
+            self.fail (f"Помилка при виконанні коду множення: {e}")
     
     def test_savings_variable_creation(self):
         """Тест 3: Перевірка створення змінної savings = 100"""
