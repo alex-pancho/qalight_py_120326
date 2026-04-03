@@ -226,3 +226,93 @@ my_ling_new_str = "Приклади створення множини в Python 
 set_from_string = set(my_ling_new_str)
 print(set_from_string)
 
+# set()
+my_dict = {} # empty dict
+en_ua = {"hello": "привіт", "good": "добре", "day": "день", "nice": "приємно", "you": "ти"}
+
+means_1 = en_ua["good"]
+print("good", means_1)
+# str tuple bool frozenset
+# int float None
+
+lat_ua = dict(labore="любов", zelo="знання", calcule="рахувати")
+print(lat_ua)
+
+with_tuple_dict =  {(1, 2, 3):'значення1', 10:'значення2' }
+print(with_tuple_dict[(1, 2, 3)])
+
+
+used_params = {'name': 'Василь', 'age': 25, 'city': 'Київ'} #, "job":"IT spec"
+user_age = used_params["age"]
+print("user age", user_age)
+# print(used_params["job"]) # KeyError
+print("job" in used_params)
+print("get age key", used_params.get("age"))
+print("get job key", used_params.get("job"))
+print("get job key", used_params.get("job", "Worker"))
+
+all_keys = used_params.keys()
+print(all_keys)
+all_vals = used_params.values()
+print(all_vals)
+all_pairs = used_params.items()
+print(all_pairs)
+
+for i in used_params:
+    print(i)
+
+for i in used_params.keys():
+    print(i)
+
+for i in used_params:
+    print(i, used_params[i])
+
+for v in used_params.values():
+    print(v)
+
+for k, v in used_params.items():
+    print(k, v)
+
+sec_dict = {"k1":"v1", "k2":"v2"}
+new_dict = sec_dict.copy()
+print("sec_dict before", sec_dict)
+sec_dict.update({"k3": 123})
+print("new_dict", new_dict)
+print("sec_dict after", sec_dict)
+vals_2 = new_dict.pop('k2', 'значення за замовчуванням')
+print(vals_2)
+
+# add value
+sec_dict.update({"1": 1})
+print(sec_dict)
+sec_dict["k99"] = 99
+print(sec_dict)
+
+# del
+del sec_dict["k99"]
+print("del k99", sec_dict)
+
+list_tuple = [('ключ1', 'значення1'), ('ключ2', 'значення2'), ('ключ3', 'значення3')]
+dict_from_tuple = dict(list_tuple)
+print(dict_from_tuple)
+
+list_lists = [['ключ1', 'значення1'], ['ключ2', 'значення2']]
+dict_from_lists = dict(list_lists)
+print(dict_from_lists)
+some_keys = ('ключA', 'ключB', 'ключC', "a")
+some_vals = ("valA", "valB", "valC", "ssd")
+dict_from_pairs = dict(zip(some_keys, some_vals))
+print(dict_from_pairs)
+
+
+name_1 = "Олександр"
+name_2 = "Alex"
+
+ukrainian_letters = set("абвгґдеєжзиіїйклмнопрстуфхцчшщьюя'")
+name_set = set(name_1.lower())
+diff = name_set - ukrainian_letters
+print(diff)
+
+name_set = set(name_2.lower())
+diff = name_set - ukrainian_letters
+print(diff)
