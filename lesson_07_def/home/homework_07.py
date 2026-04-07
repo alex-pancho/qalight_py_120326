@@ -8,16 +8,16 @@ def multiplication_table(number):
     multiplier = 1
 
     # Complete the while loop condition.
-    while multiplier <= number:
+    while True:
         result = number * multiplier
         # десь тут помилка, а може не одна
-        if  result > "25":
+        if  result > 25:
             # Enter the action to take if the result is greater than 25
-            pass
+            break
         print(str(number) + "x" + str(multiplier) + "=" + str(result))
 
         # Increment the appropriate variable
-        multi += 1
+        multiplier += 1
 
 multiplication_table(3)
 # Should print:
@@ -31,27 +31,45 @@ multiplication_table(3)
 # task 2
 """  Написати функцію, яка обчислює суму двох чисел.
 """
+two_number_sum = lambda x,y : x+y
+print(two_number_sum(2,5))
 
 
 # task 3
 """  Написати функцію, яка розрахує середнє арифметичне списку чисел.
 """
-
+def arithmetic_mean(incoming_list):
+    list_sum=0
+    for i in incoming_list:
+        list_sum += i
+    print(list_sum/len(incoming_list))
+arithmetic_mean([1,2,3,4,5,6,7,8,9,10])
+    
 # task 4
 """  Написати функцію, яка приймає рядок та повертає його у зворотному порядку.
 """
+def revers_string(incoming_string : str):
+    return "".join(reversed(incoming_string))
 
+print(revers_string("Test string"))
 # task 5
 """  Написати функцію, яка приймає список слів та повертає найдовше слово у списку.
 """
+def longest_word_in_list(incoming_list : list[str]):
+    longest_word = ""
+    for i in incoming_list:
+        if len(i) > len(longest_word):
+            longest_word = i
+    return longest_word
+print(longest_word_in_list(["aaaa","bbb","ccccccc","dddddddd"]))
+
 
 # task 6
 """  Написати функцію, яка приймає два рядки та повертає індекс першого входження другого рядка
-у перший рядок, якщо другий рядок є підрядком першого рядка, та -1, якщо другий рядок
+у перший рядок, якщо другий рядок є підрядком першого рядка, то -1, якщо другий рядок
 не є підрядком першого рядка."""
 def find_substring(str1, str2):
-
-    return -1
+    return str1.find(str2)
 
 str1 = "Hello, world!"
 str2 = "world"
