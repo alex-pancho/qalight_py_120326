@@ -8,7 +8,6 @@ print("всі унікальні елементи в списку:", unique)
 print("середнє арифметичне всіх елементів у списку:", sum(small_list)/len(small_list))
 
 
-
 # task 3. Перевірте, чи є в списку big_list дублікати
 big_list = [3, 5, -2, -1, -3, 0, 1, 4, 5, 2]
 unique_1 =  list(set(big_list))
@@ -19,14 +18,26 @@ print("чи є в списку big_list дублікати:", duplicates)
 # task 4. Знайдіть ключ з максимальним значенням у словнику add_dict
 base_dict = {'contry':'Ukraine', 'continent': 'Europe', 'size': 123}
 add_dict = {"a":1, "b":2, "c":2, "d":3, 'size': 12}
-
+max_key = max(add_dict, key=add_dict.get)
+print("ключ з максимальним значенням:", max_key)
 
 # task 5. Створіть новий словник, в якому ключі та значення base_dict будуть
 # замінені місцями ({'Ukraine':'contry'...})
+inverted = {value: key for key, value in base_dict.items()}
+print("новий словник:", inverted)
 
 # task 6. Об'єднайте два словника base_dict та add_dict  в новий словник sum_dict
 # Якщо ключі збігаються, то перетворіть значення в строку та об'єднайте їх
-sum_dict = {}
+sum_dict = base_dict.copy()
+
+for key, value in add_dict.items():
+    if key in sum_dict:
+               sum_dict[key] = str(sum_dict[key]) + str(value)
+    else:
+    
+            sum_dict[key] = value
+
+print("оновлений словник:", sum_dict)
 
 # task 7.
 line = "Створіть множину всіх символів, які входять у заданий рядок"
@@ -58,5 +69,22 @@ person_list = [('Alice', 25), ('Boby', 19), ('Charlie', 32),
 # task 10. Обробіть список кортежів person_list, що містять ім'я та вік людей,
 # так, щоб отримати словник, де ключі - вікові діапазони (10-19, 20-29 тощо),
 # а значення - списки імен людей, які потрапляють в кожен діапазон.
+age_groups = {}
+
+for name, age in person_list:
+
+    start = (age // 10) * 10
+    end = start + 9
+    range_key = f"{start}-{end}"
+    
+    
+    if range_key not in age_groups:
+        age_groups[range_key] = []
+    age_groups[range_key].append(name)
+
+print(age_groups)
+
+
+
 # Приклад виводу:
 # {'10-19': ['A'], '20-29': ['B', 'C', 'D'], '30-39': ['E'], '40-49': ['F']}
