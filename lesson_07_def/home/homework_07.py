@@ -80,17 +80,12 @@ str2 = "cat"
 print(find_substring(str1, str2)) # поверне -1
 
 # task 7
-# Обробіть список кортежів person_list, що містять ім'я та вік людей,
-# так, щоб отримати словник, де ключі - вікові діапазони (10-19, 20-29 тощо),
-# а значення - списки імен людей, які потрапляють в кожен діапазон.
-# Приклад виводу:
-# {'10-19': ['A'], '20-29': ['B', 'C', 'D'], '30-39': ['E'], '40-49': ['F']}
-# {'10-19': ['A'], '20-29': ['B', 'C', 'D'], '30-39': ['E'], '40-49': ['F']}
-def task_10():
-    person_list = [('Alice', 25), ('Boby', 19), ('Charlie', 32),
-               ('David', 28), ('Emma', 22), ('Frank', 45)]
-    new_dict = {}
 
+def sort_buy_age_diapason(person_list:list[tuple]):
+    """Return sorted dictionary with division buy age
+        """
+
+    new_dict = {}
     for i in person_list:
         if 10 <= i[1] <= 19:
             if '10-19' not in new_dict:
@@ -112,51 +107,60 @@ def task_10():
                 new_dict['40-49'] = []
             new_dict['40-49'].append(i[0])
     sorted_dict = dict(sorted(new_dict.items()))
-    print(sorted_dict)
+    return sorted_dict
+
+sorted_dict = sort_buy_age_diapason([('Alice', 25), ('Boby', 19), ('Charlie', 32),
+            ('David', 28), ('Emma', 22), ('Frank', 45)])
+print(sorted_dict)
+
 # task 8
-def password_valid_check():
-    passwor_input = input("Введіть пароль")
-    if len(passwor_input) > 8:
-        print("Символів має бути більше 8")
+
+def password_valid_check(password):
+    """Password valid check. Return True if password more then 8 symbols and
+        False if password less then 8 symbols
+        """
+
+    if len(password) >= 8:
+        return True
     else:
-        print("Пароль прийнято")
+        return False
+
+password_input = input("Введіть пароль: ")
+is_password_valid = password_valid_check(password_input)
+print(is_password_valid)
+
 # task 9
-def calculator_plus_minus():
-    num1 = float(input("Введіть перше число: "))
-    operation = input("Введіть операцію (+, -, ): ")
-    num2 = float(input("Введіть друге число: "))
-    if operation == "+":
-        print(f"{num1} + {num2} = {num1+num2}")
-    elif operation == "-":
-        print(f"{num1} - {num2} = {num1-num2}")
+def year_check(year : int):
+    """Return True if input year is leap or False if input year is non-leap.
+        """
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        return True
     else:
-        print("Ви ввели неправельну операцію")
+        return False
+
+year_input = int(input("Введіть рік: "))
+
+is_year_leap = year_check(year_input)
+print(is_year_leap)
+
 # task 10
-def password_valid_check():
-    passwor_input = input("Введіть пароль")
-    if len(passwor_input) > 8:
-        print("Символів має бути більше 8")
-    else:
-        print("Пароль прийнято")
-"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
-перетворіть їх у 4 функції, що отримують значення та повертають результат.
-Обов'язково документуйте функції та дайте зрозумілі імена змінним.
-"""
-
-def year_check():
-    year_input = int(input("Введіть рік"))
-    if (year_input % 400 == 0) or (year_input % 4 == 0 and year_input % 100 != 0):
-        print("Рік високосний")
-    else:
-        print("Рік не високосний")
-
-
-
-def golosni_count():
-    text = input("Введіть текст: ").lower()
+def golosni_count(text: str):
+    """Return number of vowels in string.
+        """
     vowels = "аеиіїоуюя"
     count = 0
     for ch in text:
         if ch in vowels:
             count += 1
-    print(f"Кількість голосних: {count}")
+    return count
+
+text_input = input("Введіть текст: ").lower()
+calculate_vowels = golosni_count(text_input)
+print(calculate_vowels)
+
+
+
+"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
+перетворіть їх у 4 функції, що отримують значення та повертають результат.
+Обов'язково документуйте функції та дайте зрозумілі імена змінним.
+"""
