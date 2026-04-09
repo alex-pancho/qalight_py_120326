@@ -5,11 +5,11 @@
 print("=== РОБОТА З СПИСКАМИ (LIST) ===")
 
 # Task 1. Створіть список з числами від 1 до 5
-numbers = [1, 2, 3, 4, 5]  # Ваш код тут
+numbers = [0, 1, 2, 3, 4, 5]  # Ваш код тут
 
 # Task 2. Додайте число 6 в кінець списку numbers
 
-numbers.append(4)
+numbers.append(6)
 print(numbers)
 
 # Task 3. Вставте число 0 на початок списку numbers  
