@@ -69,7 +69,7 @@ print("Hайдовше слово у списку:", max_word)
 у перший рядок, якщо другий рядок є підрядком першого рядка, та -1, якщо другий рядок
 не є підрядком першого рядка."""
 def find_substring(str1, str2):
-    return -1
+    return str1.find(str2)
 str1 = "Hello, world!"
 str2 = "world"
 print(find_substring(str1, str2)) # поверне 7
