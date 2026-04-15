@@ -18,26 +18,37 @@ sum_numbers_in_list("21")  # ValueError
 def sum_numbers_in_list(string_list: list):
     """Повертає список сум чисел зі списку строк,
     які складаються з чисел, розділених комою."""
+    if not isinstance(string_list, list):
+        raise ValueError("Вхідні дані повинні бути списком")
+    if len(string_list) == 0:
+        raise ValueError("Список не може бути порожнім")
     result = []
     for item in string_list:
         try:
-            pass
+            if not isinstance(item, str):
+                raise AttributeError
+            numbers = [int(num.strip()) for num in item.split(",")]
+            result.append(sum(numbers))
+        except AttributeError:
+             result.append("Не можу це зробити! AttributeError")
         except ValueError as e:
             result.append("Не можу це зробити!")
     
     return result
+print(sum_numbers_in_list(["1,2,3", "4,0,6"]))
+print(sum_numbers_in_list(["4/0,6", "asas7,8,9", "10, 20"]))
+print(sum_numbers_in_list(["1,2", 55, {"a": 1}]))
 
+# if __name__ == "__main__":
+#     output = sum_numbers_in_list(["1,2,3", "4,0,6"])
+#     print(output)
 
-if __name__ == "__main__":
-    output = sum_numbers_in_list(["1,2,3", "4,0,6"])
-    print(output)
-
-    output = sum_numbers_in_list(["1,2,3", "4/0,6", "asas7,8,9"])
-    print(output)
-    """
-    sum_numbers_in_list(["1,2,3", "4,0,6"])  # [6, 10]
-    sum_numbers_in_list(["1,2,3", "asas7,8,9", "4,0,6"])  # [6, "Не можу це зробити!", 10]
-    sum_numbers_in_list(["1,2,3,4", 7])  # [10, "Не можу це зробити! AttributeError"]
-    sum_numbers_in_list([])  # ValueError
-    sum_numbers_in_list("21")  # ValueError
-    """
+#     output = sum_numbers_in_list(["1,2,3", "4/0,6", "asas7,8,9"])
+#     print(output)
+#     """
+#     sum_numbers_in_list(["1,2,3", "4,0,6"])  # [6, 10]
+#     sum_numbers_in_list(["1,2,3", "asas7,8,9", "4,0,6"])  # [6, "Не можу це зробити!", 10]
+#     sum_numbers_in_list(["1,2,3,4", 7])  # [10, "Не можу це зробити! AttributeError"]
+#     sum_numbers_in_list([])  # ValueError
+#     sum_numbers_in_list("21")  # ValueError
+#     """
