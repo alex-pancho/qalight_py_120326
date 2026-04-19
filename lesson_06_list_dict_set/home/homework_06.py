@@ -14,15 +14,11 @@ print(average)
 # task 3. Перевірте, чи є в списку big_list дублікати
 big_list = [3, 5, -2, -1, -3, 0, 1, 4, 5, 2]
 
-for i in range(len(big_list)):
-    tmp = big_list[i]
-    for x in big_list[i + 1:]:
-        if x == tmp:
-            print("Так, дублікати є в біг ліст")
-            break
-    else:
-        continue
-    break
+changed_list =set(big_list)
+if len(big_list) > len(changed_list):
+    print("Так, дубікати є в списку")
+else:
+    print("Дублікатів немає")
 
 # task 4. Знайдіть ключ з максимальним значенням у словнику add_dict
 base_dict = {'contry':'Ukraine', 'continent': 'Europe', 'size': 123}
@@ -30,8 +26,6 @@ add_dict = {"a":1, "b":2, "c":2, "d":3, 'size': 12}
 
 max_value = max(add_dict, key=lambda k: add_dict[k])
 print(max_value)
-
-
 
 # task 5. Створіть новий словник, в якому ключі та значення base_dict будуть
 # замінені місцями ({'Ukraine':'contry'...})
@@ -66,7 +60,7 @@ print(convert_to_set)
 set_1 = {1, 2, 3, 4, 5}
 set_2 = {4, 6, 5, 10}
 set_sum = 0
-connected_set = set_1 | set_2
+connected_set = set_1 ^ set_2
 for i in connected_set:
     set_sum+=i
 print(set_sum)
