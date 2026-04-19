@@ -82,29 +82,13 @@ print(connected_set_new)
 # {'10-19': ['A'], '20-29': ['B', 'C', 'D'], '30-39': ['E'], '40-49': ['F']}
 def task_10():
     person_list = [('Alice', 25), ('Boby', 19), ('Charlie', 32),
-               ('David', 28), ('Emma', 22), ('Frank', 45)]
+                   ('David', 28), ('Emma', 22), ('Frank', 45)]
     new_dict = {}
-
-    for i in person_list:
-        if 10 <= i[1] <= 19:
-            if '10-19' not in new_dict:
-                new_dict['10-19'] = []
-            new_dict['10-19'].append(i[0])
-
-        if 20 <= i[1] <= 29:
-            if '20-29' not in new_dict:
-                new_dict['20-29'] = []
-            new_dict['20-29'].append(i[0])
-
-        if 30 <= i[1] <= 39:
-            if '30-39' not in new_dict:
-                new_dict['30-39'] = []
-            new_dict['30-39'].append(i[0])
-
-        if 40 <= i[1] <= 49:
-            if '40-49' not in new_dict:
-                new_dict['40-49'] = []
-            new_dict['40-49'].append(i[0])
+    for name, age in person_list:
+        start = (age // 10) * 10
+        end = start + 9
+        range = f"{start}-{end}"
+        new_dict.setdefault(range, []).append(name)
     sorted_dict = dict(sorted(new_dict.items()))
     print(sorted_dict)
 
