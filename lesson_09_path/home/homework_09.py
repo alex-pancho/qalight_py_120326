@@ -9,14 +9,17 @@ from pathlib import Path
    Hello, Python!
    ```
 """
-with open('lesson_09_path/home/hello.txt', 'w', encoding='utf-8') as f:
+file_path = Path(__file__).parent / "hello.txt"
+file_path.parent.mkdir(parents=True, exist_ok=True)
+
+with file_path.open('w', encoding='utf-8') as f:
    f.write('Hello, Python!')
 
 """
 2. **Читання файлу**
    Відкрий файл `hello.txt` і виведи його вміст на екран.
 """
-with open('lesson_09_path/home/hello.txt', 'r') as f:
+with file_path.open('r') as f:
     content = f.read()
     print(content)
 
@@ -28,14 +31,14 @@ with open('lesson_09_path/home/hello.txt', 'r') as f:
    Learning file operations.
    ```
 """
-with open('lesson_09_path/home/hello.txt', 'a') as f:
+with file_path.open('a') as f:
     f.write('\n Learning file operations.')
 
 """
 4. **Читання кількох рядків**
    Виведи всі рядки з файлу `hello.txt` по одному рядку (без додаткових символів `\n`).
 """
-with open('lesson_09_path/home/hello.txt', 'r', encoding='utf-8') as f:
+with file_path.open('r', encoding='utf-8') as f:
    for line in f:
       print(line.rstrip())
 
@@ -43,7 +46,7 @@ with open('lesson_09_path/home/hello.txt', 'r', encoding='utf-8') as f:
 5. **Підрахунок символів**
    Прочитай файл `hello.txt` і виведи кількість символів у ньому.
 """
-with open('lesson_09_path/home/hello.txt', 'r', encoding='utf-8') as f:
+with file_path.open('r', encoding='utf-8') as f:
    text = f.read()
    ch_sum = len(text)
    print(ch_sum)
@@ -56,10 +59,12 @@ with open('lesson_09_path/home/hello.txt', 'r', encoding='utf-8') as f:
    My first note.
    ```
 """
-path_to_dir = Path('lesson_09_path/home/data')
-path_to_dir.mkdir(exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent
+path_to_dir = BASE_DIR / 'data'
+path_to_dir.mkdir(parents=True, exist_ok=True)
 path_to_file = path_to_dir/"notes.txt"
-with open(path_to_file, 'w', encoding="utf-8") as f:
+
+with path_to_file.open('w', encoding="utf-8") as f:
    f.write('My first note.')
 
 """
@@ -75,9 +80,9 @@ for item in path_to_dir.iterdir():
 """
 content_from_notes = None
 path_to_new_file = path_to_dir/"copy.txt"
-with open(path_to_file, 'r') as f:
+with path_to_file.open('r') as f:
    content_from_notes = f.read()
-with open(path_to_new_file, 'w' ,encoding='utf-8') as f:
+with path_to_new_file.open('w' ,encoding='utf-8') as f:
    f.write(content_from_notes)
 
 """
@@ -104,7 +109,7 @@ with open(path_to_dir/'ab.txt', 'w', encoding='utf-8') as result_file:
     У файлі `notes.txt` перевір, чи є слово `"note"`.
     Якщо є — виведи `"Знайдено"`, інакше `"Не знайдено"`.
 """
-with open(path_to_file, 'r', encoding='utf-8') as f:
+with path_to_file.open('r', encoding='utf-8') as f:
     content = f.read()
     if "note" in content.lower():
         print("Знайдено")
