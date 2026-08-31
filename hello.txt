@@ -1,0 +1,7 @@
+Hello, Python!
+Learning file operations.
+Learning file operations.
+Learning file operations.
+Learning file operations.
+Learning file operations.
+Learning file operations.
